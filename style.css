@@ -3,6 +3,22 @@ body.dark-theme {
   color: #ffffff;
 }
 
+.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-theme .card {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.dark-theme .navbar,
+.dark-theme footer {
+  background-color: #000000;
+}
+
+
 .navbar-dark .navbar-nav .nav-link {
   color: #ffffff;
 }
@@ -18,6 +34,20 @@ background-image: url('hero-image.jpg');
   align-items: center;
   justify-content: center;
 }
+
+.parallax {
+  background-image: url('hero-image.jpg'); /* замените на актуальное имя файла */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .card {
   background-color: #1e1e1e;
@@ -45,5 +75,17 @@ footer.bg-dark {
 }
 
 .card {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card.equal-height {
+  min-height: 100%;
+}
+
+.card .btn {
+  margin-top: auto;
+}
+
+#recommendations > .col-md-4 {
+  margin-bottom: 2rem;
 }
