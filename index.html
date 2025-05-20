@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Турфирма</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+  <!-- Навигационное меню -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Турфирма</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Главная</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">О нас</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Туры</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Контакты</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Геройский раздел с параллаксом -->
+  <div class="jumbotron jumbotron-fluid parallax">
+    <div class="container text-center">
+      <h1 class="display-4 animate__animated animate__fadeInDown">Откройте для себя мир с Турфирма</h1>
+      <p class="lead animate__animated animate__fadeInUp">Мы предлагаем лучшие туры по всему миру.</p>
+      <button class="btn btn-primary btn-lg animate__animated animate__pulse" id="exploreBtn">Исследовать туры</button>
+    </div>
+  </div>
+
+  <!-- Популярные туры (карусель) -->
+  <div class="container">
+    <h2 class="text-center">Популярные туры</h2>
+    <div id="tourCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="moscow.jpg" class="d-block w-100" alt="Москва">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Экскурсия по Москве</h5>
+            <p>Посетите Красную площадь, Кремль и другие достопримечательности.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="baikal.jpg" class="d-block w-100" alt="Байкал">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Путешествие на Байкал</h5>
+            <p>Насладитесь красотой самого глубокого озера в мире.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="blacksea.jpg" class="d-block w-100" alt="Черное море">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Отдых на Черном море</h5>
+            <p>Проведите незабываемый отпуск на побережье Черного моря.</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#tourCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Предыдущий</span>
+      </a>
+      <a class="carousel-control-next" href="#tourCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Следующий</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Персонализированные рекомендации -->
+<div class="container my-5">
+  <h2 class="text-center">Рекомендации для вас</h2>
+  <div class="row" id="recommendations"></div>
+</div>
+
+  <!-- О нас -->
+  <div class="container">
+    <h2>О нас</h2>
+    <p>Мы - турфирма, которая предлагает лучшие туры по всему миру. Наша миссия - сделать путешествия доступными и незабываемыми.</p>
+  </div>
+
+  <!-- Контакты -->
+  <div class="container">
+    <h2>Контакты</h2>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal">
+      Отправить сообщение
+    </button>
+  </div>
+
+  <!-- Модальное окно -->
+  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Контактная форма</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Имя</label>
+              <input type="text" class="form-control" id="name" placeholder="Ваше имя">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Ваш email">
+            </div>
+            <div class="form-group">
+              <label for="message">Сообщение</label>
+              <textarea class="form-control" id="message" rows="3"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn btn-primary" id="sendMessage">Отправить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Футер -->
+  <footer class="bg-dark text-center py-3">
+    <p class="text-white">© 2025 Турфирма. Все права защищены.</p>
+  </footer>
+
+  <!-- Скрипты Bootstrap и JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Параллакс эффект
+    window.addEventListener('scroll', function() {
+      const parallax = document.querySelector('.parallax');
+      let scrollPosition = window.pageYOffset;
+      parallax.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+    });
+
+// Персонализированные рекомендации
+const recommendations = [
+  { name: 'Тур в Париж', description: 'Романтическое путешествие в город любви.' },
+  { name: 'Сафари в Африке', description: 'Незабываемое приключение в дикой природе.' },
+  { name: 'Отдых на Бали', description: 'Расслабьтесь на райских пляжах.' },
+  { name: 'Приключение в Альпах', description: 'Исследуйте величественные горы и живописные деревни.' },
+  { name: 'Культурный тур в Японию', description: 'Погрузитесь в уникальную культуру и традиции Японии.' },
+  { name: 'Пляжный отдых на Мальдивах', description: 'Насладитесь кристально чистой водой и белоснежными пляжами.' }
+];
+
+const recContainer = document.getElementById('recommendations');
+recommendations.forEach(rec => {
+  const card = document.createElement('div');
+  card.className = 'col-md-4';
+  card.innerHTML = `
+    <div class="card equal-height mb-5">
+      <div class="card-body">
+        <h5 class="card-title">${rec.name}</h5>
+        <p class="card-text">${rec.description}</p>
+        <a href="#" class="btn btn-outline-primary">Подробнее</a>
+      </div>
+    </div>
+  `;
+  recContainer.appendChild(card);
+});
+</script>
+</body>
+</html>
