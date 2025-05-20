@@ -83,8 +83,9 @@
   <!-- Персонализированные рекомендации -->
 <div class="container my-5">
   <h2 class="text-center">Рекомендации для вас</h2>
-  <div class="row" id="recommendations"></div>
+  <div class="row mb-4" id="recommendations"></div>
 </div>
+
 
   <!-- О нас -->
   <div class="container">
@@ -170,7 +171,8 @@ recommendations.forEach(rec => {
       <div class="card-body">
         <h5 class="card-title">${rec.name}</h5>
         <p class="card-text">${rec.description}</p>
-        <a href="#" class="btn btn-outline-primary">Подробнее</a>
+        <a href="#" class="btn btn-outline-primary" onclick="alert('Функционал в разработке')">Подробнее</a>
+
       </div>
     </div>
   `;
